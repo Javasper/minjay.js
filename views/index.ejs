@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<script src="/javascripts/mine.js"></script>
+
+	
+	<script>
+
+window.onload = function()
+{
+	
+ 
+$("#parent").delegate('.myclass', 'click', function(e){console.log(e)});
+
+$('p:first-child a').on('click', function (event) {
+	event.preventDefault();
+
+  console.log("I passed the first test(bind Event)");
+  // do something else
+});
+ 
+
+$('a').on('foo', function () {
+ console.log("I passed the second test(Custom Event)");
+});
+
+$('a:first-child').trigger('foo');
+ 
+
+
+$.on('foo', function () {
+	console.log("I passed the third test(Arbitrary events )");
+});
+ 
+
+$.trigger("foo");
+
+
+ 
+$('p').forEach(function (el, index) {
+  console.log(el.innerHTML);
+
+
+console.log("I passed the fourth test");
+
+
+
+
+});
+ 
+
+}
+</script>
+
+</head>
+  <body> 
+
+
+
+	<div> 	<p> <a href="#"> First Test</a></p>
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+
+<p> <a href="#"> Second Test</a></p>
+
+
+	  <div id="parent" id="thing">
+
+		<button id="first" class="myclass"> 1</button>
+		  <button class="myclass" id="second">2y</button>
+		  		  <button id="third" class="myclass"> 3</button>
+		  		  <button id="fourth" class="myclass"> 4</button>
+		  		 
+	  </div>
+  </body>
+</html>
