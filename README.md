@@ -51,3 +51,6 @@ console.log("I passed the fourth test");
 
 });
 	
+And like JQuery, all the minjay.js code will go inside of 
+window.onload = function()
+{}
