@@ -1,14 +1,3 @@
-
-$('p').forEach(function (el, index) {
-  console.log(el.innerHTML);
-
-
-console.log("I passed the fourth test");
-
-
-
-
-});
 A very small clone of JQuery. 
 The main thing I cloned from JQuery is the $. 
 
