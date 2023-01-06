@@ -38,3 +38,16 @@ The second part we trigger this made up event "foo".
 This will execute the console.log() stuff we specified.
 
 We can also specify all tags with a .forEach like below. 
+	
+	
+$('p').forEach(function (el, index) {
+  console.log(el.innerHTML);
+
+
+console.log("I passed the fourth test");
+
+
+
+
+});
+	
